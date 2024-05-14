@@ -1,35 +1,32 @@
+using System.IO;
+
 namespace Cours.function;
 
 public class StartMenu
 {
     public static int Menu()
     {
-        Console.WriteLine("Bienvenue dans le démineur");
-        Console.WriteLine("1 : jouer au démineur");
-        Console.WriteLine("2 : charger la sauvegarde");
-        Console.WriteLine("3 : Leaderboard");
-        Console.WriteLine("");
-
+        string instructions = File.ReadAllText("assets/instructions.txt");
+        Console.WriteLine(instructions);
         int choix = Convert.ToInt32(Console.ReadLine());
 
-        if (choix == 1)
+        switch (choix)
         {
-            Console.WriteLine("Let's play !");
-            PlayGame.Play();
+            case 1:
+                Console.WriteLine("Let's play !");
+                PlayGame.Play();
+                break;
+            case 2:
+                Save.LoadSaveGame();
+                break;
+            case 3:
+                LeaderBoard.LeaderBoardShow();
+                break;
+            default:
+                Console.WriteLine("Choix invalide");
+                break;
         }
-        else if (choix == 2)
-        {
-            Save.LoadSaveGame();
-        }
-        else if (choix == 3)
-        {
-            LeaderBoard.LeaderBoardShow();
-        }
-        else
-        {
-            Console.WriteLine("Choix invalide");
-        }
-
+        
         return choix;
     }
 }
