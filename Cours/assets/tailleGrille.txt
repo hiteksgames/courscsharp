@@ -1,0 +1,4 @@
+Choisissez la taille de la grille
+1 : 10x10
+1 : 20x20
+1 : 26x26

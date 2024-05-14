@@ -47,7 +47,7 @@ public class LeaderBoard
         {
             loop++;
             Console.WriteLine($"Nom : {leader.Nom} | Durée : {leader.duree} | Difficulté : {leader.dificulty}");
-            if (loop == 10)
+            if (loop == 3)
             {
                 break;
             }

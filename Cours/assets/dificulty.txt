@@ -1,0 +1,4 @@
+Choisissez la difficulté
+1 : facile
+2 : moyen
+3 : difficile

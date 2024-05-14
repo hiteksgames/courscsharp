@@ -5,11 +5,8 @@ public static class PlayGame
     public static void Play()
     {
         Console.Clear();
-        Console.WriteLine("Choisissez la taille de la grille");
-        Console.WriteLine("1 : 10x10");
-        Console.WriteLine("2 : 20x20");
-        Console.WriteLine("3 : 26x26");
-        Console.WriteLine("");
+        string tailleGrille = File.ReadAllText("assets/tailleGrille.txt");
+        Console.WriteLine(tailleGrille);
         int taille = Convert.ToInt32(Console.ReadLine());
         if (taille != 1 && taille != 2 && taille != 3)
         {
@@ -29,11 +26,8 @@ public static class PlayGame
                 break;
         }
         Console.Clear();
-        Console.WriteLine("Choisissez la difficulté");
-        Console.WriteLine("1 : facile");
-        Console.WriteLine("2 : moyen");
-        Console.WriteLine("3 : difficile");
-        Console.WriteLine("");
+        string dificulty = File.ReadAllText("assets/dificulty.txt");
+        Console.WriteLine(dificulty);
         int difficulte = Convert.ToInt32(Console.ReadLine());
         if (difficulte != 1 && difficulte != 2 && difficulte != 3)
         {

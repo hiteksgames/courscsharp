@@ -49,8 +49,6 @@ public class Input
                 grid[ligne][colonne] = adjMines.ToString()[0];
                 casesRestantes--;
                 Grid.DisplayGrid(grid, taille);
-
-                // Vérification de la victoire
                 if (casesRestantes == 0)
                 {
                     Console.WriteLine("Félicitations ! Vous avez gagné !");
